@@ -1,18 +1,18 @@
 # For Deployment
 deployment:
- name:
- replicas:
- lobel:
- container:
- image:
- port:
+ name: nginx
+ replicas: 1
+ lobel: nginx
+ container: web-container
+ image: Arambakam-yaswanth/nginx
+ port: 80
 
 # For Service
 service:
-  name:
-  type:
-  label:
-  port:
-  nodeport:
+  name: nginx
+  type: Nodeport
+  label: nginx
+  port: 80
+  nodeport: 30007
 
 # Others follow up  
